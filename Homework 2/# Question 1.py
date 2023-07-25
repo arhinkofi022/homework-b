@@ -1,23 +1,12 @@
-# Question 1
-
 def compareStrings(garland, flower):
-    common_count = 0
+   
+    garlands = set(garland)
+    flowers = set(flower)
 
    
-    garland = garland.lower()
-    flower = flower.lower()
-
-    garland_chars = set(garland)
+    common_flowers = garlands.intersection(flowers)
 
    
-    for char in flower:
-        if char in garland_chars:
-            common_count += 1
+    common = len(common_flowers)
 
-    return common_count
-
-
-garland_str = "garl"
-flower_str = "flower"
-result = compareStrings(garland_str, flower_str)
-print("Number of flowers that are garlands:", result)
+    return common
